@@ -1,0 +1,253 @@
+Week,Day,Task
+Week 1,Day 1 (4h),"Setup Git repo, .gitignore, README.md"
+Week 1,Day 1 (4h),"Python venv, requirements.txt skeleton"
+Week 1,Day 1 (4h),Project folder structure
+Week 1,Day 2 (4h),Download Kaggle dataset
+Week 1,Day 2 (4h),"Initial EDA (shape, missing values, class distribution)"
+Week 1,Day 2 (4h),Data validation checks
+Week 1,Day 3 (4h),Feature exploration and analysis
+Week 1,Day 3 (4h),Outlier detection
+Week 1,Day 3 (4h),Visualizations of fraud distribution
+Week 1,Day 4 (4h),Design preprocessing pipeline structure
+Week 1,Day 4 (4h),Design feature engineering pipeline
+Week 1,Day 4 (4h),Document data schema and feature definitions
+Week 1,Day 5 (4h),Setup DVC (data versioning) - optional
+Week 1,Day 5 (4h),Create data loading utilities
+Week 1,Day 5 (4h),Write unit tests for data loaders
+Week 2-3,Day 6 (4h),"Implement data validation (schema, nulls, types)"
+Week 2-3,Day 6 (4h),Handle missing values (imputation strategy)
+Week 2-3,Day 6 (4h),Unit test validation
+Week 2-3,Day 7 (4h),Implement numerical scaling (StandardScaler)
+Week 2-3,Day 7 (4h),Implement categorical encoding (one-hot/label)
+Week 2-3,Day 7 (4h),Feature transformation pipeline
+Week 2-3,Day 8 (4h),Transaction velocity features (rolling windows)
+Week 2-3,Day 8 (4h),User behavior profile features
+Week 2-3,Day 8 (4h),Amount deviation features
+Week 2-3,Day 9 (4h),"Rolling statistics features (mean, std, min, max)"
+Week 2-3,Day 9 (4h),"Time-based features (hour, day, weekday)"
+Week 2-3,Day 9 (4h),Test feature pipeline end-to-end
+Week 2-3,Day 10 (4h),Implement SMOTE for class imbalance
+Week 2-3,Day 10 (4h),Create stratified train/test split
+Week 2-3,Day 10 (4h),Serialize preprocessing pipeline (joblib)
+Week 2-3,Day 11 (4h),"Feature store design (caching, versioning)"
+Week 2-3,Day 11 (4h),Feature importance baseline
+Week 2-3,Day 11 (4h),Data quality report generation
+Week 2-3,Day 12 (4h),Feature engineering review and optimization
+Week 2-3,Day 12 (4h),Prepare training/validation/test datasets
+Week 2-3,Day 12 (4h),Create data pipeline documentation
+Week 2-3,Day 13 (4h),Setup Pandas data validation framework
+Week 2-3,Day 13 (4h),Create automated data quality checks
+Week 2-3,Day 13 (4h),Integration tests for entire pipeline
+Week 2-3,Day 14 (4h),Performance benchmark for data pipeline
+Week 2-3,Day 14 (4h),Memory optimization
+Week 2-3,Day 14 (4h),Pipeline documentation and README
+Week 4-5,Day 15 (4h),Implement Logistic Regression baseline
+Week 4-5,Day 15 (4h),Train and evaluate on train/val/test
+Week 4-5,Day 15 (4h),Save baseline metrics
+Week 4-5,Day 16 (4h),Implement Random Forest model
+Week 4-5,Day 16 (4h),Cross-validation (5-fold stratified)
+Week 4-5,Day 16 (4h),Performance evaluation
+Week 4-5,Day 17 (4h),Implement XGBoost model
+Week 4-5,Day 17 (4h),Handle class weights for imbalance
+Week 4-5,Day 17 (4h),Hyperparameter defaults
+Week 4-5,Day 18 (4h),Implement Isolation Forest (unsupervised)
+Week 4-5,Day 18 (4h),Evaluate on fraud detection capability
+Week 4-5,Day 18 (4h),Compare anomaly vs supervised
+Week 4-5,Day 19 (4h),Setup Optuna framework
+Week 4-5,Day 19 (4h),Define hyperparameter search space
+Week 4-5,Day 19 (4h),Implement objective function
+Week 4-5,Day 20 (4h),Optuna optimization for Random Forest
+Week 4-5,Day 20 (4h),Track trials and best parameters
+Week 4-5,Day 20 (4h),Visualization of optimization
+Week 4-5,Day 21 (4h),Optuna optimization for XGBoost
+Week 4-5,Day 21 (4h),Early stopping configuration
+Week 4-5,Day 21 (4h),Comparison of optimized models
+Week 4-5,Day 22 (4h),"Model evaluation metrics (precision, recall, F1, ROC-AUC)"
+Week 4-5,Day 22 (4h),Confusion matrix analysis
+Week 4-5,Day 22 (4h),PR curve analysis
+Week 4-5,Day 23 (4h),Model comparison report generation
+Week 4-5,Day 23 (4h),Feature importance analysis (all models)
+Week 4-5,Day 23 (4h),Select production baseline model
+Week 4-5,Day 24 (4h),Cross-validation results analysis
+Week 4-5,Day 24 (4h),Hyperparameter tuning documentation
+Week 4-5,Day 24 (4h),Model performance benchmarking
+Week 6,Day 25 (4h),Initialize FastAPI project
+Week 6,Day 25 (4h),Define Pydantic models for TransactionInput
+Week 6,Day 25 (4h),Basic /predict endpoint structure
+Week 6,Day 26 (4h),Implement /predict endpoint (single transaction)
+Week 6,Day 26 (4h),Load model and preprocessor from disk
+Week 6,Day 26 (4h),Return fraud probability + confidence
+Week 6,Day 27 (4h),Implement /batch_predict endpoint
+Week 6,Day 27 (4h),Handle multiple transactions in request
+Week 6,Day 27 (4h),Streaming responses for large batches
+Week 6,Day 28 (4h),Input validation and error handling
+Week 6,Day 28 (4h),Request logging and audit trail
+Week 6,Day 28 (4h),/health endpoint
+Week 6,Day 29 (4h),API documentation (OpenAPI/Swagger)
+Week 6,Day 29 (4h),Error response standardization
+Week 6,Day 29 (4h),Rate limiting placeholder
+Week 6,Day 30 (4h),Setup MLflow server and tracking
+Week 6,Day 30 (4h),Configure experiment tracking
+Week 6,Day 30 (4h),Log model metadata and metrics
+Week 6,Day 31 (4h),MLflow model registry setup
+Week 6,Day 31 (4h),Model promotion workflow (dev→staging→prod)
+Week 6,Day 31 (4h),Version control for models
+Week 6,Day 32 (4h),API integration with model registry
+Week 6,Day 32 (4h),Dynamic model loading from MLflow
+Week 6,Day 32 (4h),Model versioning in API responses
+Week 6,Day 33 (4h),FastAPI performance testing
+Week 6,Day 33 (4h),Latency benchmarking
+Week 6,Day 33 (4h),Concurrency testing
+Week 6,Day 34 (4h),"API security basics (auth placeholders, input sanitization)"
+Week 6,Day 34 (4h),CORS configuration
+Week 6,Day 34 (4h),API tests with pytest
+Week 7,Day 35 (4h),Setup Streamlit dashboard project
+Week 7,Day 35 (4h),Create basic layout (sections for different metrics)
+Week 7,Day 35 (4h),Live data connection
+Week 7,Day 36 (4h),Live predictions feed (table widget)
+Week 7,Day 36 (4h),Probability distribution histogram
+Week 7,Day 36 (4h),Recent high-risk transactions
+Week 7,Day 37 (4h),"Performance metrics dashboard (precision, recall, F1)"
+Week 7,Day 37 (4h),Confusion matrix visualization
+Week 7,Day 37 (4h),ROC curve display
+Week 7,Day 38 (4h),Data drift detection (KS test)
+Week 7,Day 38 (4h),Feature distribution comparison (training vs live)
+Week 7,Day 38 (4h),Drift alerts and severity
+Week 7,Day 39 (4h),Concept drift monitoring
+Week 7,Day 39 (4h),Prediction distribution tracking
+Week 7,Day 39 (4h),Model performance degradation alerts
+Week 7,Day 40 (4h),"Alert system design (email, Slack templates)"
+Week 7,Day 40 (4h),Threshold configuration interface
+Week 7,Day 40 (4h),Alert history and logging
+Week 7,Day 41 (4h),"Implement statistical drift tests (KS, KL divergence)"
+Week 7,Day 41 (4h),Automated drift report generation
+Week 7,Day 41 (4h),Alert deduplication logic
+Week 7,Day 42 (4h),"Dashboard interactivity (filters, date range)"
+Week 7,Day 42 (4h),Export metrics to CSV
+Week 7,Day 42 (4h),Dashboard performance optimization
+Week 7,Day 43 (4h),Monitoring documentation
+Week 7,Day 43 (4h),Dashboard user guide
+Week 7,Day 43 (4h),Alert threshold tuning guide
+Week 7,Day 44 (4h),Integration testing (API + Dashboard + Monitoring)
+Week 7,Day 44 (4h),End-to-end monitoring workflow
+Week 7,Day 44 (4h),Production monitoring checklist
+Week 8,Day 45 (4h),Design retraining pipeline architecture
+Week 8,Day 45 (4h),Scheduled job configuration (weekly)
+Week 8,Day 45 (4h),Data collection logic
+Week 8,Day 46 (4h),Implement automated data gathering
+Week 8,Day 46 (4h),Label availability check (ground truth)
+Week 8,Day 46 (4h),Data quality validation before retraining
+Week 8,Day 47 (4h),Retraining workflow (preprocessing → training → evaluation)
+Week 8,Day 47 (4h),Baseline comparison logic
+Week 8,Day 47 (4h),Performance threshold validation
+Week 8,Day 48 (4h),Auto-deployment logic (if performance improves)
+Week 8,Day 48 (4h),Rollback mechanism
+Week 8,Day 48 (4h),Model versioning and tracking
+Week 8,Day 49 (4h),Scheduler setup (APScheduler or Airflow lightweight)
+Week 8,Day 49 (4h),Retraining job monitoring
+Week 8,Day 49 (4h),Failure notifications
+Week 8,Day 50 (4h),Retraining pipeline testing
+Week 8,Day 50 (4h),Historical simulation (backtest retraining)
+Week 8,Day 50 (4h),Documentation and runbooks
+Week 8,Day 51 (4h),Feature importance tracking over time
+Week 8,Day 51 (4h),Model comparison reports
+Week 8,Day 51 (4h),Retraining metrics logging
+Week 8,Day 52 (4h),Implement model registry promotion workflow
+Week 8,Day 52 (4h),Staging → Production deployment
+Week 8,Day 52 (4h),Automated testing before deployment
+Week 8,Day 53 (4h),Retraining documentation and playbook
+Week 8,Day 53 (4h),Manual retraining trigger capability
+Week 8,Day 53 (4h),Retraining dry-run testing
+Week 8,Day 54 (4h),End-to-end retraining workflow test
+Week 8,Day 54 (4h),Production readiness check
+Week 8,Day 54 (4h),Performance benchmarking
+Week 9,Day 55 (4h),Create Dockerfile for API service
+Week 9,Day 55 (4h),Multi-stage build for optimization
+Week 9,Day 55 (4h),Test docker build
+Week 9,Day 56 (4h),Create Docker Compose for local development
+Week 9,Day 56 (4h),"Services: API, MLflow, Dashboard, Database"
+Week 9,Day 56 (4h),Volume mounts for development
+Week 9,Day 57 (4h),Create pytest test suite (data pipeline)
+Week 9,Day 57 (4h),Test data validation functions
+Week 9,Day 57 (4h),Test preprocessing pipeline
+Week 9,Day 58 (4h),Create pytest test suite (model training)
+Week 9,Day 58 (4h),Test model loading and prediction
+Week 9,Day 58 (4h),Test hyperparameter optimization
+Week 9,Day 59 (4h),Create pytest test suite (API endpoints)
+Week 9,Day 59 (4h),Test request validation
+Week 9,Day 59 (4h),Test error handling
+Week 9,Day 60 (4h),Setup pytest-cov for coverage reports
+Week 9,Day 60 (4h),Target >80% code coverage
+Week 9,Day 60 (4h),Coverage reports in CI/CD
+Week 9,Day 61 (4h),Setup GitHub Actions CI/CD workflow
+Week 9,Day 61 (4h),Trigger on push to main/develop
+Week 9,Day 61 (4h),"Automated linting and formatting (Black, isort)"
+Week 9,Day 62 (4h),Add automated testing step to CI/CD
+Week 9,Day 62 (4h),Docker image build and push
+Week 9,Day 62 (4h),"Code quality checks (flake8, mypy)"
+Week 9,Day 63 (4h),Setup staging deployment in CI/CD
+Week 9,Day 63 (4h),Manual approval for production deployment
+Week 9,Day 63 (4h),Deployment rollback capability
+Week 9,Day 64 (4h),CI/CD pipeline documentation
+Week 9,Day 64 (4h),Local development setup guide
+Week 9,Day 64 (4h),Deployment runbook
+Week 10,Day 65 (4h),Local testing (Docker Compose)
+Week 10,Day 65 (4h),API endpoint testing
+Week 10,Day 65 (4h),Dashboard connectivity
+Week 10,Day 66 (4h),Staging deployment (manual scripts)
+Week 10,Day 66 (4h),Health checks and smoke tests
+Week 10,Day 66 (4h),Performance testing
+Week 10,Day 67 (4h),Production deployment scripts
+Week 10,Day 67 (4h),"Environment configuration (.env, secrets)"
+Week 10,Day 67 (4h),Service health checks
+Week 10,Day 68 (4h),"API latency testing (p50, p95, p99)"
+Week 10,Day 68 (4h),Throughput testing (1000+ RPS)
+Week 10,Day 68 (4h),Load testing configuration
+Week 10,Day 69 (4h),Production monitoring setup
+Week 10,Day 69 (4h),Log aggregation integration
+Week 10,Day 69 (4h),Alert routing (PagerDuty placeholders)
+Week 10,Day 70 (4h),"Kubernetes deployment files (optional, for scale)"
+Week 10,Day 70 (4h),"YAML manifests for pod, service, deployment"
+Week 10,Day 70 (4h),Helm chart structure
+Week 10,Day 71 (4h),"Security hardening (API security, data encryption)"
+Week 10,Day 71 (4h),TLS/SSL configuration
+Week 10,Day 71 (4h),Rate limiting implementation
+Week 10,Day 72 (4h),Disaster recovery playbook
+Week 10,Day 72 (4h),Backup and recovery procedures
+Week 10,Day 72 (4h),Failover testing
+Week 10,Day 73 (4h),Deployment documentation (how to deploy)
+Week 10,Day 73 (4h),Troubleshooting guide
+Week 10,Day 73 (4h),Operational runbooks
+Week 10,Day 74 (4h),Final production readiness review
+Week 10,Day 74 (4h),Performance benchmarking summary
+Week 10,Day 74 (4h),Compliance and audit trail checks
+Week 11,Day 75 (4h),Performance optimization (API latency reduction)
+Week 11,Day 75 (4h),Feature store caching strategies
+Week 11,Day 75 (4h),Model inference optimization
+Week 11,Day 76 (4h),SHAP value implementation (advanced explainability)
+Week 11,Day 76 (4h),Feature contribution visualization
+Week 11,Day 76 (4h),Decision explanation generation
+Week 11,Day 77 (4h),A/B testing framework design
+Week 11,Day 77 (4h),Model comparison infrastructure
+Week 11,Day 77 (4h),Traffic splitting logic
+Week 11,Day 78 (4h),Advanced monitoring features
+Week 11,Day 78 (4h),Custom metric definitions
+Week 11,Day 78 (4h),Business impact dashboard
+Week 11,Day 79 (4h),"Graph-based fraud detection (optional, Phase 2)"
+Week 11,Day 79 (4h),Relationship mapping
+Week 11,Day 79 (4h),Ring detection algorithm
+Week 11,Day 80 (4h),Documentation polish and finalization
+Week 11,Day 80 (4h),Architecture diagrams
+Week 11,Day 80 (4h),Complete technical specifications
+Week 12,Day 81 (4h),Bug fixes and optimization
+Week 12,Day 81 (4h),Performance tuning
+Week 12,Day 81 (4h),Code cleanup
+Week 12,Day 82 (4h),Comprehensive testing (all modules)
+Week 12,Day 82 (4h),Integration testing
+Week 12,Day 82 (4h),Regression testing
+Week 12,Day 83 (4h),Documentation review and updates
+Week 12,Day 83 (4h),User guides and how-to docs
+Week 12,Day 83 (4h),API documentation finalization
+Week 12,Day 84 (4h),Final security audit
+Week 12,Day 84 (4h),Penetration testing (basic)
+Week 12,Day 84 (4h),Compliance verification
