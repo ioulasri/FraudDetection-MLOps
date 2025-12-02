@@ -41,7 +41,7 @@ class DataLoader:
         logger.info(f"Loading data from {self.data_path}")
 
         try:
-            df = pd.read_csv(self.data_path, **kwargs)
+            df: pd.DataFrame = pd.read_csv(self.data_path, **kwargs)
             logger.info(f"Successfully loaded {len(df)} records with {len(df.columns)} columns")
             return df
         except Exception as e:

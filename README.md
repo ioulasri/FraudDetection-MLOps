@@ -81,17 +81,17 @@ make quality       # Run all quality checks
 
 ## Features
 
-✅ Modular preprocessing pipeline  
-✅ Configurable data cleaning and feature engineering  
-✅ Stratified train/val/test splitting  
-✅ No data leakage (fit on train, transform all)  
-✅ Comprehensive logging  
-✅ Production-ready code structure  
-✅ Test suite with 70%+ coverage  
-✅ CI/CD pipeline with GitHub Actions  
-✅ Pre-commit hooks for code quality  
-✅ Automated security scanning  
-✅ Multi-Python version testing (3.9, 3.10, 3.11)  
+✅ Modular preprocessing pipeline
+✅ Configurable data cleaning and feature engineering
+✅ Stratified train/val/test splitting
+✅ No data leakage (fit on train, transform all)
+✅ Comprehensive logging
+✅ Production-ready code structure
+✅ Test suite with 70%+ coverage
+✅ CI/CD pipeline with GitHub Actions
+✅ Pre-commit hooks for code quality
+✅ Automated security scanning
+✅ Multi-Python version testing (3.9, 3.10, 3.11)
 
 ## Next Steps
 

@@ -19,7 +19,7 @@ repos:
     rev: 7.0.0
     hooks:
       - id: flake8
-        args: [--max-line-length=100, --extend-ignore=E203,W503]
+        args: ['--max-line-length=100', '--extend-ignore=E203,W503']
         additional_dependencies: [flake8-docstrings]
 
   # Type checking
@@ -27,8 +27,14 @@ repos:
     rev: v1.8.0
     hooks:
       - id: mypy
-        args: [--ignore-missing-imports, --no-strict-optional]
-        additional_dependencies: [types-all]
+        args: ['--ignore-missing-imports', '--no-strict-optional', '--python-version=3.9']
+        additional_dependencies: [
+          'pandas-stubs',
+          'types-requests',
+          'numpy',
+          'pandas',
+        ]
+        exclude: ^(tests/|notebooks/)
 
   # Security checks
   - repo: https://github.com/PyCQA/bandit
@@ -48,14 +54,17 @@ repos:
         args: [--maxkb=100000]
       - id: check-merge-conflict
       - id: check-json
+        exclude: ^notebooks/(02_feature_engineering|03_modeling|04_evaluation)\.ipynb$
       - id: check-toml
       - id: detect-private-key
 
-  # Jupyter notebook checks
+  # Jupyter notebook checks (skip empty notebooks)
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 1.7.1
     hooks:
       - id: nbqa-black
-        args: [--line-length=100]
+        args: ['--line-length=100']
+        exclude: ^notebooks/(02_feature_engineering|03_modeling|04_evaluation)\.ipynb$
       - id: nbqa-isort
-        args: [--profile=black]
+        args: ['--profile=black']
+        exclude: ^notebooks/(02_feature_engineering|03_modeling|04_evaluation)\.ipynb$

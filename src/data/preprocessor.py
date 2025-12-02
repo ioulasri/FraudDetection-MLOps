@@ -9,6 +9,7 @@ from typing import List, Optional
 
 import numpy as np
 import pandas as pd
+from pandas import Series
 from sklearn.preprocessing import RobustScaler, StandardScaler
 
 logger = logging.getLogger(__name__)
@@ -51,12 +52,17 @@ class DataCleaner:
             df = df.dropna()
             logger.info(f"Dropped {missing_before} rows with missing values")
         elif strategy in ["mean", "median", "mode"]:
-            for col in df.select_dtypes(include=[np.number]).columns:
+            numeric_df: pd.DataFrame = df.select_dtypes(include=[np.number])
+            numeric_cols: List[str] = numeric_df.columns.tolist()
+            for col in numeric_cols:
                 if df[col].isnull().any():
+                    col_series = df[col]
                     if strategy == "mean":
-                        df[col].fillna(df[col].mean(), inplace=True)
+                        fill_value = col_series.mean()
+                        df[col] = col_series.fillna(fill_value)
                     elif strategy == "median":
-                        df[col].fillna(df[col].median(), inplace=True)
+                        fill_value = col_series.median()
+                        df[col] = col_series.fillna(fill_value)
             logger.info(f"Filled {missing_before} missing values using {strategy}")
 
         self.cleaning_stats["missing_values_handled"] = missing_before
@@ -88,11 +94,15 @@ class DataCleaner:
                 IQR = Q3 - Q1
                 lower_bound = Q1 - threshold * IQR
                 upper_bound = Q3 + threshold * IQR
-                df = df[(df[col] >= lower_bound) & (df[col] <= upper_bound)]
+                mask: Series = (df[col] >= lower_bound) & (df[col] <= upper_bound)
+                df = df.loc[mask]
 
             elif method == "zscore":
-                z_scores = np.abs((df[col] - df[col].mean()) / df[col].std())
-                df = df[z_scores < threshold]
+                col_mean = df[col].mean()
+                col_std = df[col].std()
+                z_scores = np.abs((df[col] - col_mean) / col_std)
+                mask = z_scores < threshold
+                df = df[mask]
 
         removed = initial_len - len(df)
         if removed > 0:
@@ -260,8 +270,8 @@ class FeatureScaler:
         else:
             raise ValueError(f"Unknown scaler type: {scaler_type}")
 
-        self.feature_columns = None
-        self.target_column = None
+        self.feature_columns: Optional[List[str]] = None
+        self.target_column: Optional[str] = None
 
     def fit(self, df: pd.DataFrame, target_col: str = "Class") -> "FeatureScaler":
         """
