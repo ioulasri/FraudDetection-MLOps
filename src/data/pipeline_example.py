@@ -1,5 +1,6 @@
 """
-Example Usage of the Preprocessing Pipeline
+Example Usage of the Preprocessing Pipeline.
+
 Demonstrates how to use the complete data processing workflow.
 """
 
@@ -22,7 +23,6 @@ logging.basicConfig(
 
 def main():
     """Run complete preprocessing pipeline example."""
-
     # 1. LOAD DATA
     print("\n" + "=" * 50)
     print("STEP 1: LOADING DATA")

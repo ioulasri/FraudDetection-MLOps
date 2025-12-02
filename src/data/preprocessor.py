@@ -1,5 +1,6 @@
 """
-Preprocessing and Feature Engineering Module
+Preprocessing and Feature Engineering Module.
+
 Handles data cleaning, transformation, and feature creation.
 """
 
@@ -34,7 +35,8 @@ class DataCleaner:
         """
         Handle missing values.
 
-        Args:
+        Args
+        ----
             df: Input DataFrame
             strategy: 'drop', 'mean', 'median', or 'mode'
         """
@@ -65,7 +67,8 @@ class DataCleaner:
         """
         Remove outliers from specified columns.
 
-        Args:
+        Args
+        ----
             df: Input DataFrame
             columns: Columns to check for outliers
             method: 'iqr' or 'zscore'
@@ -107,7 +110,8 @@ class DataCleaner:
         """
         Apply all cleaning operations.
 
-        Args:
+        Args
+        ----
             df: Input DataFrame
             remove_duplicates: Whether to remove duplicates
             missing_strategy: Strategy for handling missing values
@@ -163,7 +167,8 @@ class FeatureEngineer:
         """
         Add statistical aggregations of PCA features.
 
-        Args:
+        Args
+        ----
             df: Input DataFrame
             pca_columns: List of PCA column names (e.g., ['V1', 'V2', ...])
         """
@@ -207,7 +212,8 @@ class FeatureEngineer:
         """
         Apply all feature engineering steps.
 
-        Args:
+        Args
+        ----
             df: Input DataFrame
             include_time: Add time-based features
             include_amount: Add amount-based features
@@ -242,7 +248,8 @@ class FeatureScaler:
         """
         Initialize scaler.
 
-        Args:
+        Args
+        ----
             scaler_type: 'standard' or 'robust'
         """
         if scaler_type == "standard":
@@ -259,7 +266,8 @@ class FeatureScaler:
         """
         Fit scaler on training data.
 
-        Args:
+        Args
+        ----
             df: Training DataFrame
             target_col: Name of target column to exclude from scaling
         """
@@ -301,7 +309,8 @@ class PreprocessingPipeline:
         """
         Initialize preprocessing pipeline.
 
-        Args:
+        Args
+        ----
             cleaning_config: Configuration for data cleaning
             feature_config: Configuration for feature engineering
             scaler_type: Type of scaler to use
@@ -319,7 +328,8 @@ class PreprocessingPipeline:
         """
         Fit pipeline on training data.
 
-        Args:
+        Args
+        ----
             df: Training DataFrame
             target_col: Target column name
         """
@@ -343,7 +353,8 @@ class PreprocessingPipeline:
         """
         Transform data using fitted pipeline.
 
-        Args:
+        Args
+        ----
             df: DataFrame to transform
         """
         if not self.is_fitted:

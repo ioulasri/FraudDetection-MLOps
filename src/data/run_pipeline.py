@@ -1,5 +1,6 @@
 """
-Main Preprocessing Script
+Main Preprocessing Script.
+
 Uses configuration file to run the complete pipeline.
 """
 
@@ -38,7 +39,6 @@ def setup_logging():
 
 def main():
     """Run complete preprocessing pipeline."""
-
     # Setup
     setup_logging()
     logger = logging.getLogger(__name__)

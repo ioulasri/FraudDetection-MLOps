@@ -1,5 +1,6 @@
 """
-Data Loading Module
+Data Loading Module.
+
 Handles loading raw data from various sources.
 """
 
@@ -18,7 +19,8 @@ class DataLoader:
         """
         Initialize DataLoader.
 
-        Args:
+        Args
+        ----
             data_path: Path to the data file or directory
         """
         self.data_path = Path(data_path)
@@ -27,10 +29,12 @@ class DataLoader:
         """
         Load data from CSV file.
 
-        Args:
+        Args
+        ----
             **kwargs: Additional arguments for pd.read_csv
 
-        Returns:
+        Returns
+        -------
             Loaded DataFrame
         """
         logger.info(f"Loading data from {self.data_path}")
@@ -47,14 +51,17 @@ class DataLoader:
         """
         Validate loaded data.
 
-        Args:
+        Args
+        ----
             df: DataFrame to validate
             required_columns: List of required column names
 
-        Returns:
+        Returns
+        -------
             True if validation passes
 
-        Raises:
+        Raises
+        ------
             ValueError: If validation fails
         """
         if df.empty:
@@ -72,11 +79,13 @@ class DataLoader:
         """
         Load and validate data in one step.
 
-        Args:
+        Args
+        ----
             required_columns: List of required column names
             **kwargs: Additional arguments for pd.read_csv
 
-        Returns:
+        Returns
+        -------
             Validated DataFrame
         """
         df = self.load_csv(**kwargs)

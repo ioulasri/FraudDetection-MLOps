@@ -1,5 +1,6 @@
 """
-Configuration Template for Preprocessing Pipeline
+Configuration Template for Preprocessing Pipeline.
+
 Modify these settings based on your needs.
 """
 

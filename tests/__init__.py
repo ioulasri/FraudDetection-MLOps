@@ -1,3 +1,1 @@
-"""
-Tests package for fraud detection system.
-"""
+"""Tests package for fraud detection system."""

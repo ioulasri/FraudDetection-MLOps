@@ -1,6 +1,4 @@
-"""
-Quick test script to verify the preprocessing pipeline works.
-"""
+"""Quick test script to verify the preprocessing pipeline works."""
 
 from splitter import DataSplitter
 from preprocessor import PreprocessingPipeline, DataCleaner, FeatureEngineer, FeatureScaler
@@ -40,7 +38,8 @@ def test_splitter(df):
 
         print(f"✓ Split sizes - Train: {len(train)}, Val: {len(val)}, Test: {len(test)}")
         print(
-            f"✓ Fraud rates - Train: {train['Class'].mean():.4f}, Val: {val['Class'].mean():.4f}, Test: {test['Class'].mean():.4f}"
+            f"✓ Fraud rates - Train: {train['Class'].mean():.4f}, "
+            f"Val: {val['Class'].mean():.4f}, Test: {test['Class'].mean():.4f}"
         )
 
         return train, val, test
@@ -117,7 +116,8 @@ def test_full_pipeline(train_df, val_df, test_df):
         test_processed = pipeline.transform(test_df)
 
         print(
-            f"✓ Processed shapes - Train: {train_processed.shape}, Val: {val_processed.shape}, Test: {test_processed.shape}"
+            f"✓ Processed shapes - Train: {train_processed.shape}, "
+            f"Val: {val_processed.shape}, Test: {test_processed.shape}"
         )
 
         # Verify same columns

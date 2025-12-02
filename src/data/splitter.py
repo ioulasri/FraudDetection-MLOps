@@ -1,5 +1,6 @@
 """
-Data Splitting Module
+Data Splitting Module.
+
 Handles train/validation/test splits with stratification.
 """
 
@@ -25,7 +26,8 @@ class DataSplitter:
         """
         Initialize DataSplitter.
 
-        Args:
+        Args
+        ----
             test_size: Proportion of data for test set
             val_size: Proportion of remaining data for validation set
             random_state: Random seed for reproducibility
@@ -42,11 +44,13 @@ class DataSplitter:
         """
         Split data into train, validation, and test sets.
 
-        Args:
+        Args
+        ----
             df: Input DataFrame
             target_col: Name of target column
 
-        Returns:
+        Returns
+        -------
             Tuple of (train_df, val_df, test_df)
         """
         logger.info(f"Splitting data: test_size={self.test_size}, val_size={self.val_size}")
@@ -80,11 +84,13 @@ class DataSplitter:
         """
         Split data and separate features from target.
 
-        Args:
+        Args
+        ----
             df: Input DataFrame
             target_col: Name of target column
 
-        Returns:
+        Returns
+        -------
             Tuple of (X_train, X_val, X_test, y_train, y_val, y_test)
         """
         train, val, test = self.split(df, target_col)
@@ -110,7 +116,8 @@ class DataSplitter:
         """
         Save splits to CSV files.
 
-        Args:
+        Args
+        ----
             train: Training DataFrame
             val: Validation DataFrame
             test: Test DataFrame
@@ -131,10 +138,12 @@ class DataSplitter:
         """
         Load splits from CSV files.
 
-        Args:
+        Args
+        ----
             input_dir: Directory containing split files
 
-        Returns:
+        Returns
+        -------
             Tuple of (train_df, val_df, test_df)
         """
         input_path = Path(input_dir)

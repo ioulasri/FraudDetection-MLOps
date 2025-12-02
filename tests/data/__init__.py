@@ -1,3 +1,1 @@
-"""
-Data preprocessing tests.
-"""
+"""Data preprocessing tests."""
