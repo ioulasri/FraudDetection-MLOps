@@ -17,7 +17,7 @@ plotly==5.16.1
 # Jupyter
 jupyter==1.0.0
 notebook==7.3.3
-ipykernel==7.0.1
+ipykernel==6.29.5
 
 # Experiment tracking
 mlflow==2.7.0
