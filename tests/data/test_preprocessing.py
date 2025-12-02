@@ -3,13 +3,9 @@
 import sys
 from pathlib import Path
 
-from loader import DataLoader
-from preprocessor import DataCleaner, FeatureEngineer, FeatureScaler, PreprocessingPipeline
-from splitter import DataSplitter
-
-# Add src/data to path
-project_root = Path(__file__).parent.parent.parent
-sys.path.insert(0, str(project_root / "src" / "data"))
+from data.loader import DataLoader
+from data.preprocessor import DataCleaner, FeatureEngineer, FeatureScaler, PreprocessingPipeline
+from data.splitter import DataSplitter
 
 
 def test_loader():
