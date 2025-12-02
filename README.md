@@ -1,5 +1,9 @@
 # FraudDetection-MLOps
 
+![CI Status](https://github.com/ioulasri/FraudDetection-MLOps/workflows/CI%2FCD%20Pipeline/badge.svg)
+![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)
+![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
+
 A production-ready fraud detection system with MLOps best practices.
 
 ## Project Structure
@@ -45,6 +49,9 @@ source venv_fraud/bin/activate  # On macOS/Linux
 # Install dependencies
 pip install -r requirements.txt
 pip install -r requirements-dev.txt  # For development
+
+# Setup pre-commit hooks (recommended for contributors)
+pre-commit install
 ```
 
 ### 2. Run Preprocessing Pipeline
@@ -57,8 +64,13 @@ python run_pipeline.py
 ### 3. Run Tests
 
 ```bash
-cd tests/data
-python test_preprocessing.py
+# Run all tests with coverage
+pytest tests/ -v --cov=src
+
+# Or use make commands
+make test          # Run tests
+make test-cov      # Run tests with coverage report
+make quality       # Run all quality checks
 ```
 
 ## Documentation
@@ -75,7 +87,11 @@ python test_preprocessing.py
 ✅ No data leakage (fit on train, transform all)  
 ✅ Comprehensive logging  
 ✅ Production-ready code structure  
-✅ Test suite included  
+✅ Test suite with 70%+ coverage  
+✅ CI/CD pipeline with GitHub Actions  
+✅ Pre-commit hooks for code quality  
+✅ Automated security scanning  
+✅ Multi-Python version testing (3.9, 3.10, 3.11)  
 
 ## Next Steps
 
