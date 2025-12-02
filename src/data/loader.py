@@ -4,10 +4,11 @@ Data Loading Module.
 Handles loading raw data from various sources.
 """
 
-import pandas as pd
 import logging
 from pathlib import Path
 from typing import Optional, Union
+
+import pandas as pd
 
 logger = logging.getLogger(__name__)
 

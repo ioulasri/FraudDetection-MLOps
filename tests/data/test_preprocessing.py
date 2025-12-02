@@ -1,10 +1,11 @@
 """Quick test script to verify the preprocessing pipeline works."""
 
-from splitter import DataSplitter
-from preprocessor import PreprocessingPipeline, DataCleaner, FeatureEngineer, FeatureScaler
-from loader import DataLoader
 import sys
 from pathlib import Path
+
+from loader import DataLoader
+from preprocessor import DataCleaner, FeatureEngineer, FeatureScaler, PreprocessingPipeline
+from splitter import DataSplitter
 
 # Add src/data to path
 project_root = Path(__file__).parent.parent.parent

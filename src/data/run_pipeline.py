@@ -4,21 +4,22 @@ Main Preprocessing Script.
 Uses configuration file to run the complete pipeline.
 """
 
-from config import (
-    DATA_CONFIG,
-    SPLIT_CONFIG,
-    CLEANING_CONFIG,
-    FEATURE_CONFIG,
-    SCALING_CONFIG,
-    OUTPUT_CONFIG,
-    EXPERIMENT_CONFIG,
-)
-from splitter import DataSplitter
-from preprocessor import PreprocessingPipeline
-from loader import DataLoader
 import logging
 import sys
 from pathlib import Path
+
+from config import (
+    CLEANING_CONFIG,
+    DATA_CONFIG,
+    EXPERIMENT_CONFIG,
+    FEATURE_CONFIG,
+    OUTPUT_CONFIG,
+    SCALING_CONFIG,
+    SPLIT_CONFIG,
+)
+from loader import DataLoader
+from preprocessor import PreprocessingPipeline
+from splitter import DataSplitter
 
 # Add current directory to path
 sys.path.insert(0, str(Path(__file__).parent))

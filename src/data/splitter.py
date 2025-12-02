@@ -4,11 +4,12 @@ Data Splitting Module.
 Handles train/validation/test splits with stratification.
 """
 
-import pandas as pd
 import logging
-from typing import Tuple
-from sklearn.model_selection import train_test_split
 from pathlib import Path
+from typing import Tuple
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
 
 logger = logging.getLogger(__name__)
 
