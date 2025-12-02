@@ -14,7 +14,6 @@ logger = logging.getLogger(__name__)
 
 class DataCleaner:
     """Handle data cleaning operations."""
-    
     def __init__(self):
         self.cleaning_stats = {}
     

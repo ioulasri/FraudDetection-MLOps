@@ -39,11 +39,10 @@ env/
 .ipynb_checkpoints
 *.ipynb_checkpoints/
 
-# Data files (too large for git) - WILL BE IGNORED
+# Data files (too large for git)
 data/raw/*.csv
 data/processed/*.csv
 data/splits/*.csv
-data/**/*.csv
 
 # Keep directory structure
 !data/raw/.gitkeep

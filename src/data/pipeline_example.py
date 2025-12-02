@@ -3,14 +3,22 @@ Example Usage of the Preprocessing Pipeline
 Demonstrates how to use the complete data processing workflow.
 """
 import logging
+from pathlib import Path
 from loader import DataLoader
 from preprocessor import PreprocessingPipeline
 from splitter import DataSplitter
 
 # Set up logging
+log_dir = Path('logs')
+log_dir.mkdir(parents=True, exist_ok=True)
+
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.StreamHandler(),
+        logging.FileHandler(log_dir / 'pipeline_example.log')
+    ]
 )
 
 def main():
