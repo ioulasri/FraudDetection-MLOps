@@ -2,18 +2,15 @@
 Quick test script to verify the preprocessing pipeline works.
 """
 
-import pandas as pd
-import numpy as np
+from splitter import DataSplitter
+from preprocessor import PreprocessingPipeline, DataCleaner, FeatureEngineer, FeatureScaler
+from loader import DataLoader
 import sys
 from pathlib import Path
 
 # Add src/data to path
 project_root = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(project_root / "src" / "data"))
-
-from loader import DataLoader
-from preprocessor import PreprocessingPipeline, DataCleaner, FeatureEngineer, FeatureScaler
-from splitter import DataSplitter
 
 
 def test_loader():

@@ -3,16 +3,6 @@ Main Preprocessing Script
 Uses configuration file to run the complete pipeline.
 """
 
-import logging
-import sys
-from pathlib import Path
-
-# Add current directory to path
-sys.path.insert(0, str(Path(__file__).parent))
-
-from loader import DataLoader
-from preprocessor import PreprocessingPipeline
-from splitter import DataSplitter
 from config import (
     DATA_CONFIG,
     SPLIT_CONFIG,
@@ -22,6 +12,15 @@ from config import (
     OUTPUT_CONFIG,
     EXPERIMENT_CONFIG,
 )
+from splitter import DataSplitter
+from preprocessor import PreprocessingPipeline
+from loader import DataLoader
+import logging
+import sys
+from pathlib import Path
+
+# Add current directory to path
+sys.path.insert(0, str(Path(__file__).parent))
 
 
 def setup_logging():
@@ -45,7 +44,7 @@ def main():
     logger = logging.getLogger(__name__)
 
     logger.info("=" * 60)
-    logger.info(f"Starting Preprocessing Pipeline")
+    logger.info("Starting Preprocessing Pipeline")
     logger.info(f"Experiment: {EXPERIMENT_CONFIG['experiment_name']}")
     logger.info(f"Version: {EXPERIMENT_CONFIG['version']}")
     logger.info(f"Description: {EXPERIMENT_CONFIG['description']}")

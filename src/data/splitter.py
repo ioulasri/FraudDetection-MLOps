@@ -3,10 +3,9 @@ Data Splitting Module
 Handles train/validation/test splits with stratification.
 """
 
-import numpy as np
 import pandas as pd
 import logging
-from typing import Tuple, Optional
+from typing import Tuple
 from sklearn.model_selection import train_test_split
 from pathlib import Path
 
