@@ -1,22 +1,22 @@
 # Data handling
-pandas==2.1.1
+pandas==2.0.3
 numpy==1.26.4
 scipy==1.11.4
 
 # Machine Learning
 scikit-learn==1.4.2
-xgboost==1.7.6
+xgboost==1.6.2
 lightgbm==4.4.0
 imbalanced-learn==0.12.4
 
 # Visualization
 matplotlib==3.8.1
 seaborn==0.12.2
-plotly==5.16.1
+plotly==5.15.0
 
 # Jupyter
 jupyter==1.0.0
-notebook==7.3.3
+notebook==6.5.7
 ipykernel==6.29.5
 
 # Experiment tracking
