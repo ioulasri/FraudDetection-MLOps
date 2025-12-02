@@ -1,8 +1,5 @@
 """Quick test script to verify the preprocessing pipeline works."""
 
-import sys
-from pathlib import Path
-
 from data.loader import DataLoader
 from data.preprocessor import DataCleaner, FeatureEngineer, FeatureScaler, PreprocessingPipeline
 from data.splitter import DataSplitter
