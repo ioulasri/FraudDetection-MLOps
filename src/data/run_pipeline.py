@@ -20,12 +20,16 @@ from config import (
 
 def setup_logging():
     """Set up logging configuration."""
+    # Ensure logs directory exists
+    log_dir = Path('logs')
+    log_dir.mkdir(parents=True, exist_ok=True)
+    
     logging.basicConfig(
         level=getattr(logging, OUTPUT_CONFIG['log_level']),
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
         handlers=[
             logging.StreamHandler(),
-            logging.FileHandler('preprocessing.log')
+            logging.FileHandler(log_dir / 'preprocessing.log')
         ]
     )
 
