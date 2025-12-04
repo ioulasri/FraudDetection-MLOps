@@ -66,10 +66,11 @@ class TestDataLoader:
         result = loader.validate_data(df, required_columns=["Time", "Amount", "Class"])
         assert result is True
 
-    def test_validate_data_empty_dataframe(self, empty_csv):
+    def test_validate_data_empty_dataframe(self):
         """Test validation with empty DataFrame."""
-        loader = DataLoader(empty_csv)
-        df = loader.load_csv()
+        # Create an empty DataFrame directly instead of loading from CSV
+        df = pd.DataFrame()
+        loader = DataLoader("dummy_path.csv")
 
         with pytest.raises(ValueError, match="DataFrame is empty"):
             loader.validate_data(df)
